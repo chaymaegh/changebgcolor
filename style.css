@@ -1,0 +1,90 @@
+
+:root {
+    --purpel :#8e44ad
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-transform: uppercase;
+transition: all .2s linear;
+font-family: sans-serif;
+}
+.container{
+    min-height: 100vh;
+    background: var(--purpel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    
+}
+
+.container h1{
+   color: var(--purpel);
+   background: #fff;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+   border-radius: 8px;
+   font-size: 2rem;
+   padding: .3em 1.8rem;
+}
+
+.color-switcher{
+    position: fixed;
+    top: 25px;
+    right: -170px;
+    width: 170px;
+    padding: 10px;
+    background: #fff;
+    z-index: 1000;
+}
+.color-switcher.active{
+    right: 0px;
+}
+
+.color-switcher h3{
+    color: var(--purpel);
+    font-size:16px;
+   
+    border-bottom: 1px solid #3333;
+    padding:5px 0;
+    text-align: center;
+}
+.color-switcher .switcher-btn{
+    position: absolute;
+    top: 0;
+    left: -55px;
+    color: var(--purpel);
+    background: #fff;
+    padding: 13.2px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.color-switcher .switcher-btn i{
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.color-switcher .theme-buttons-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.color-switcher .theme-buttons-container .theme-buttons{
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
